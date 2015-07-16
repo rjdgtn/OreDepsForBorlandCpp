@@ -120,6 +120,7 @@ struct Math
 };
 
 
+/*
 template <>
 struct Math<float>
 {
@@ -149,7 +150,7 @@ struct Math<float>
    static float hypot (float x, float y)	{return ::sqrtf(x*x + y*y);}
 #endif
 };
-
+*/
 
 //--------------------------------------------------------------------------
 // Don Hatch's version of sin(x)/x, which is accurate for very small x.
