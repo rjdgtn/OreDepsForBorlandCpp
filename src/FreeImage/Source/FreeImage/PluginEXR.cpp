@@ -48,7 +48,7 @@ FreeImage input stream wrapper
 class C_IStream: public Imf::IStream {
 public:
 	C_IStream (FreeImageIO *io, fi_handle handle):
-	IStream(""), _io (io), _handle(handle) {}
+		Imf::IStream(""), _io(io), _handle(handle) {}
 
 	virtual bool	read (char c[/*n*/], int n);
 	virtual Imf::Int64	tellg ();
@@ -67,7 +67,7 @@ FreeImage output stream wrapper
 class C_OStream: public Imf::OStream {
 public:
 	C_OStream (FreeImageIO *io, fi_handle handle):
-	OStream(""), _io (io), _handle(handle) {}
+	Imf::OStream(""), _io(io), _handle(handle) {}
 
     virtual void	write (const char c[/*n*/], int n);
 	virtual Imf::Int64	tellp ();
