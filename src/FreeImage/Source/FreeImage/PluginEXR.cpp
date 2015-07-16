@@ -210,7 +210,7 @@ Load(FreeImageIO *io, fi_handle handle, int page, int flags, void *data) {
 		FREE_IMAGE_TYPE image_type = FIT_UNKNOWN;
 		int components = 0;
 		bool bMixedComponents = false;
-
+		using namespace Imf;
 		for (Imf::ChannelList::ConstIterator i = channels.begin(); i != channels.end(); ++i) {
 			components++;
 			if(components == 1) {
