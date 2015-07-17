@@ -41,7 +41,7 @@
 
 #include <ImfChromaticitiesAttribute.h>
 
-
+/*
 namespace Imf {
 
 
@@ -84,3 +84,4 @@ ChromaticitiesAttribute::readValueFrom (IStream &is, int size, int version)
 
 
 } // namespace Imf
+*/

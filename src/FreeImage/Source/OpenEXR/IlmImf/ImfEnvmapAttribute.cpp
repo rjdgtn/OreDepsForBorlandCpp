@@ -43,7 +43,7 @@
 
 
 namespace Imf {
-
+	/*	
 
 template <>
 const char *
@@ -70,6 +70,6 @@ EnvmapAttribute::readValueFrom (IStream &is, int size, int version)
     Xdr::read <StreamIO> (is, tmp);
     _value = Envmap (tmp);
 }
-
+*/
 
 } // namespace Imf

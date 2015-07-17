@@ -50,9 +50,24 @@ namespace Imf {
 
 
 typedef TypedAttribute<Envmap> EnvmapAttribute;
-template <> const char *EnvmapAttribute::staticTypeName ();
-template <> void EnvmapAttribute::writeValueTo (OStream &, int) const;
-template <> void EnvmapAttribute::readValueFrom (IStream &, int, int);
+template <> const char *EnvmapAttribute::staticTypeName()
+{
+	return "envmap";
+}
+
+
+template <> void EnvmapAttribute::writeValueTo(OStream & os, int) const
+{
+	unsigned char tmp = _value;
+	Xdr::write <StreamIO>(os, tmp);
+}
+
+template <> void EnvmapAttribute::readValueFrom(IStream & is, int, int)
+{
+	unsigned char tmp;
+	Xdr::read <StreamIO>(is, tmp);
+	_value = Envmap(tmp);
+}
 
 
 } // namespace Imf

@@ -42,7 +42,7 @@
 
 #include <ImfCompressionAttribute.h>
 
-
+/*
 namespace Imf {
 
 
@@ -74,3 +74,4 @@ CompressionAttribute::readValueFrom (IStream &is, int size, int version)
 
 
 } // namespace Imf
+*/

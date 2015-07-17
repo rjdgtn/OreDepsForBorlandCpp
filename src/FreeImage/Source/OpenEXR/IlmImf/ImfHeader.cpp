@@ -79,6 +79,7 @@ using Imath::V2i;
 using Imath::V2f;
 using IlmThread::Mutex;
 using IlmThread::Lock;
+using namespace Imf;
 
 
 namespace {
@@ -124,6 +125,7 @@ usesLongNames (const Header &header)
     // set.  Without the flag, older versions of the library would mis-
     // interpret the file as broken.
     //
+	
 
     for (Header::ConstIterator i = header.begin();
          i != header.end();
@@ -146,9 +148,10 @@ usesLongNames (const Header &header)
     return false;
 }
 
-template <size_t N>
-void checkIsNullTerminated (const char (&str)[N], const char *what)
+//template <size_t N>
+void checkIsNullTerminated(const char(&str)[Name::SIZE], const char *what)
 {
+	const unsigned int N = Name::SIZE;
 	for (int i = 0; i < N; ++i) {
 		if (str[i] == '\0')
 			return;
@@ -994,7 +997,7 @@ Header::readFrom (IStream &is, int &version)
 	if (name[0] == 0)
 	    break;
 
-	checkIsNullTerminated (name, "attribute name");
+	checkIsNullTerminated(name, "attribute name");
 
 	//
 	// Read the attribute type and the size of the attribute value.
@@ -1004,7 +1007,7 @@ Header::readFrom (IStream &is, int &version)
 	int size;
 
 	Xdr::read <StreamIO> (is, Name::MAX_LENGTH, typeName);
-	checkIsNullTerminated (typeName, "attribute type name");
+	checkIsNullTerminated(typeName, "attribute type name");
 	Xdr::read <StreamIO> (is, size);
 
 	AttributeMap::iterator i = _map.find (name);

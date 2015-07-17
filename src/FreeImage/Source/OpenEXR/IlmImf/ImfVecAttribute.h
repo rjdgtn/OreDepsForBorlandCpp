@@ -55,40 +55,179 @@
 namespace Imf {
 
 
-typedef TypedAttribute<Imath::V2i> V2iAttribute;
-template <> const char *V2iAttribute::staticTypeName ();
-template <> void V2iAttribute::writeValueTo (OStream &, int) const;
-template <> void V2iAttribute::readValueFrom (IStream &, int, int);
+	typedef TypedAttribute<Imath::V2i> V2iAttribute;
+
+	typedef TypedAttribute<Imath::V2f> V2fAttribute;
+
+	typedef TypedAttribute<Imath::V2d> V2dAttribute;
+
+	typedef TypedAttribute<Imath::V3i> V3iAttribute;
+
+	typedef TypedAttribute<Imath::V3f> V3fAttribute;
+
+	typedef TypedAttribute<Imath::V3d> V3dAttribute;
 
 
-typedef TypedAttribute<Imath::V2f> V2fAttribute;
-template <> const char *V2fAttribute::staticTypeName ();
-template <> void V2fAttribute::writeValueTo (OStream &, int) const;
-template <> void V2fAttribute::readValueFrom (IStream &, int, int);
+	template <>
+	const char *
+		V2iAttribute::staticTypeName()
+	{
+			return "v2i";
+		}
 
 
-typedef TypedAttribute<Imath::V2d> V2dAttribute;
-template <> const char *V2dAttribute::staticTypeName ();
-template <> void V2dAttribute::writeValueTo (OStream &, int) const;
-template <> void V2dAttribute::readValueFrom (IStream &, int, int);
+	template <>
+	void
+		V2iAttribute::writeValueTo(OStream &os, int version) const
+	{
+			Xdr::write <StreamIO>(os, _value.x);
+			Xdr::write <StreamIO>(os, _value.y);
+		}
 
 
-typedef TypedAttribute<Imath::V3i> V3iAttribute;
-template <> const char *V3iAttribute::staticTypeName ();
-template <> void V3iAttribute::writeValueTo (OStream &, int) const;
-template <> void V3iAttribute::readValueFrom (IStream &, int, int);
+	template <>
+	void
+		V2iAttribute::readValueFrom(IStream &is, int size, int version)
+	{
+			Xdr::read <StreamIO>(is, _value.x);
+			Xdr::read <StreamIO>(is, _value.y);
+		}
 
 
-typedef TypedAttribute<Imath::V3f> V3fAttribute;
-template <> const char *V3fAttribute::staticTypeName ();
-template <> void V3fAttribute::writeValueTo (OStream &, int) const;
-template <> void V3fAttribute::readValueFrom (IStream &, int, int);
+	template <>
+	const char *
+		V2fAttribute::staticTypeName()
+	{
+			return "v2f";
+		}
 
 
-typedef TypedAttribute<Imath::V3d> V3dAttribute;
-template <> const char *V3dAttribute::staticTypeName ();
-template <> void V3dAttribute::writeValueTo (OStream &, int) const;
-template <> void V3dAttribute::readValueFrom (IStream &, int, int);
+	template <>
+	void
+		V2fAttribute::writeValueTo(OStream &os, int version) const
+	{
+			Xdr::write <StreamIO>(os, _value.x);
+			Xdr::write <StreamIO>(os, _value.y);
+		}
+
+
+	template <>
+	void
+		V2fAttribute::readValueFrom(IStream &is, int size, int version)
+	{
+			Xdr::read <StreamIO>(is, _value.x);
+			Xdr::read <StreamIO>(is, _value.y);
+		}
+
+
+	template <>
+	const char *
+		V2dAttribute::staticTypeName()
+	{
+			return "v2d";
+		}
+
+
+	template <>
+	void
+		V2dAttribute::writeValueTo(OStream &os, int version) const
+	{
+			Xdr::write <StreamIO>(os, _value.x);
+			Xdr::write <StreamIO>(os, _value.y);
+		}
+
+
+	template <>
+	void
+		V2dAttribute::readValueFrom(IStream &is, int size, int version)
+	{
+			Xdr::read <StreamIO>(is, _value.x);
+			Xdr::read <StreamIO>(is, _value.y);
+		}
+
+
+	template <>
+	const char *
+		V3iAttribute::staticTypeName()
+	{
+			return "v3i";
+		}
+
+
+	template <>
+	void
+		V3iAttribute::writeValueTo(OStream &os, int version) const
+	{
+			Xdr::write <StreamIO>(os, _value.x);
+			Xdr::write <StreamIO>(os, _value.y);
+			Xdr::write <StreamIO>(os, _value.z);
+		}
+
+
+	template <>
+	void
+		V3iAttribute::readValueFrom(IStream &is, int size, int version)
+	{
+			Xdr::read <StreamIO>(is, _value.x);
+			Xdr::read <StreamIO>(is, _value.y);
+			Xdr::read <StreamIO>(is, _value.z);
+		}
+
+
+	template <>
+	const char *
+		V3fAttribute::staticTypeName()
+	{
+			return "v3f";
+		}
+
+
+	template <>
+	void
+		V3fAttribute::writeValueTo(OStream &os, int version) const
+	{
+			Xdr::write <StreamIO>(os, _value.x);
+			Xdr::write <StreamIO>(os, _value.y);
+			Xdr::write <StreamIO>(os, _value.z);
+		}
+
+
+	template <>
+	void
+		V3fAttribute::readValueFrom(IStream &is, int size, int version)
+	{
+			Xdr::read <StreamIO>(is, _value.x);
+			Xdr::read <StreamIO>(is, _value.y);
+			Xdr::read <StreamIO>(is, _value.z);
+		}
+
+
+	template <>
+	const char *
+		V3dAttribute::staticTypeName()
+	{
+			return "v3d";
+		}
+
+
+	template <>
+	void
+		V3dAttribute::writeValueTo(OStream &os, int version) const
+	{
+			Xdr::write <StreamIO>(os, _value.x);
+			Xdr::write <StreamIO>(os, _value.y);
+			Xdr::write <StreamIO>(os, _value.z);
+		}
+
+
+	template <>
+	void
+		V3dAttribute::readValueFrom(IStream &is, int size, int version)
+	{
+			Xdr::read <StreamIO>(is, _value.x);
+			Xdr::read <StreamIO>(is, _value.y);
+			Xdr::read <StreamIO>(is, _value.z);
+		}
 
 
 } // namespace Imf

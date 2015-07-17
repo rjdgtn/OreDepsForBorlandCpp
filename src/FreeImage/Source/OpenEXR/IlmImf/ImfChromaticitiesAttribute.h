@@ -53,7 +53,11 @@ namespace Imf {
 typedef TypedAttribute<Chromaticities> ChromaticitiesAttribute;
 
 template <>
-const char *ChromaticitiesAttribute::staticTypeName ();
+const char *ChromaticitiesAttribute::staticTypeName()
+{
+	return "chromaticities";
+}
+
 
 template <>
 void ChromaticitiesAttribute::writeValueTo (OStream &, int) const;
