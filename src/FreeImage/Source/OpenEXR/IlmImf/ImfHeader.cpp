@@ -72,6 +72,7 @@
 
 
 namespace Imf {
+using namespace Imf;
 
 using namespace std;
 using Imath::Box2i;

@@ -50,7 +50,7 @@
 
 namespace Imf {
 
-
+/*
 template <>
 const char *
 V2iAttribute::staticTypeName ()
@@ -182,7 +182,7 @@ V3fAttribute::readValueFrom (IStream &is, int size, int version)
     Xdr::read <StreamIO> (is, _value.x);
     Xdr::read <StreamIO> (is, _value.y);
     Xdr::read <StreamIO> (is, _value.z);
-}
+}*/
 
 //
 //template <>

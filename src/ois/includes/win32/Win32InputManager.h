@@ -23,6 +23,9 @@ restrictions:
 #ifndef OIS_Win32InputManager_H
 #define OIS_Win32InputManager_H
 
+//#define __nullnullterminated
+#define __possibly_notnullterminated
+
 #include "OISInputManager.h"
 #include "OISFactoryCreator.h"
 #include "win32/Win32Prereqs.h"

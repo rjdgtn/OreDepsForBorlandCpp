@@ -44,6 +44,7 @@
 
 /*
 namespace Imf {
+using namespace Imf;
 
 namespace {
 

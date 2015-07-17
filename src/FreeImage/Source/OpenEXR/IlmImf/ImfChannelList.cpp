@@ -49,6 +49,7 @@ using std::string;
 using std::set;
 
 namespace Imf {
+using namespace Imf;
 
 
 Channel::Channel (PixelType t, int xs, int ys, bool pl):

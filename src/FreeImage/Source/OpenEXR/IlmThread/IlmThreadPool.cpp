@@ -48,7 +48,7 @@
 using namespace std;
 
 namespace IlmThread {
-namespace {
+//namespace {
 
 class WorkerThread: public Thread
 {
@@ -63,7 +63,7 @@ class WorkerThread: public Thread
     ThreadPool::Data *	_data;
 };
 
-} //namespace
+//} //namespace
 
 
 struct TaskGroup::Data

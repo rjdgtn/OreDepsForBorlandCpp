@@ -43,6 +43,7 @@
 
 
 namespace Imf {
+using namespace Imf;
 	/*	
 
 template <>
