@@ -47,7 +47,7 @@
 namespace Imf {
 
 
-template <>
+//template <>
 const char *
 Box2iAttribute::staticTypeName ()
 {
@@ -55,7 +55,7 @@ Box2iAttribute::staticTypeName ()
 }
 
 
-template <>
+//template <>
 void
 Box2iAttribute::writeValueTo (OStream &os, int version) const
 {
@@ -66,7 +66,7 @@ Box2iAttribute::writeValueTo (OStream &os, int version) const
 }
 
 
-template <>
+//template <>
 void
 Box2iAttribute::readValueFrom (IStream &is, int size, int version)
 {
@@ -77,7 +77,7 @@ Box2iAttribute::readValueFrom (IStream &is, int size, int version)
 }
 
 
-template <>
+//template <>
 const char *
 Box2fAttribute::staticTypeName ()
 {
@@ -85,7 +85,8 @@ Box2fAttribute::staticTypeName ()
 }
 
 
-template <>
+
+//template <>
 void
 Box2fAttribute::writeValueTo (OStream &os, int version) const
 {
@@ -96,7 +97,7 @@ Box2fAttribute::writeValueTo (OStream &os, int version) const
 }
 
 
-template <>
+//template <>
 void
 Box2fAttribute::readValueFrom (IStream &is, int size, int version)
 {

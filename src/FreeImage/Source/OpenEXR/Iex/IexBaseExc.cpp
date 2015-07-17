@@ -68,7 +68,7 @@ stackTracer ()
 
 BaseExc::BaseExc (const char* s) throw () :
     std::string (s? s: ""),
-    _stackTrace (currentStackTracer? currentStackTracer(): "")
+    _stackTrace (currentStackTracer? currentStackTracer(): std::string(""))
 {
     // empty
 }
@@ -76,7 +76,7 @@ BaseExc::BaseExc (const char* s) throw () :
 
 BaseExc::BaseExc (const std::string &s) throw () :
     std::string (s),
-    _stackTrace (currentStackTracer? currentStackTracer(): "")
+	_stackTrace(currentStackTracer ? currentStackTracer() : std::string(""))
 {
     // empty
 }
@@ -84,7 +84,7 @@ BaseExc::BaseExc (const std::string &s) throw () :
 
 BaseExc::BaseExc (std::stringstream &s) throw () :
     std::string (s.str()),
-    _stackTrace (currentStackTracer? currentStackTracer(): "")
+	_stackTrace(currentStackTracer ? currentStackTracer() : std::string(""))
 {
     // empty
 }

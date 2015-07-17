@@ -1613,9 +1613,9 @@ Vec3<T>::operator /= (T a)
 
 template <class T>
 inline Vec3<T>
-Vec3<T>::operator / (const Vec3 &v) const
+Vec3<T>::operator / (const Vec3<T> &v) const
 {
-    return Vec3 (x / v.x, y / v.y, z / v.z);
+    return Vec3<T> (x / v.x, y / v.y, z / v.z);
 }
 
 template <class T>
