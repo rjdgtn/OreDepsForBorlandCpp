@@ -44,6 +44,7 @@
 using namespace Imath;
 
 namespace Imf {
+using namespace Imf;
 
 Rational
 guessExactFps (double fps)

@@ -41,6 +41,7 @@
 #include "IlmThreadPool.h"
 
 namespace Imf {
+using namespace Imf;
 
 
 int

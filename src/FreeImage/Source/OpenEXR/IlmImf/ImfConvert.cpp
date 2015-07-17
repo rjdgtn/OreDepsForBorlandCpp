@@ -44,6 +44,7 @@
 #include <limits.h>
 
 namespace Imf {
+using namespace Imf;
 namespace {
 
 inline bool

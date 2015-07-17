@@ -45,6 +45,7 @@
 #include <string.h>
 
 namespace Imf {
+using namespace Imf;
 
 
 OpaqueAttribute::OpaqueAttribute (const char typeName[]):

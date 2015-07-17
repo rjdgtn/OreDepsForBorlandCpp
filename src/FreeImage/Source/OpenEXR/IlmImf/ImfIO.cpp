@@ -43,6 +43,7 @@
 #include "Iex.h"
 
 namespace Imf {
+using namespace Imf;
 
 
 IStream::IStream (const char fileName[]): _fileName (fileName)

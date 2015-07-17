@@ -43,6 +43,7 @@
 #include "Iex.h"
 
 namespace Imf {
+using namespace Imf;
 
    
 TimeCode::TimeCode ()

@@ -47,6 +47,7 @@
 #include <zlib.h>
 
 namespace Imf {
+using namespace Imf;
 
 
 ZipCompressor::ZipCompressor

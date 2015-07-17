@@ -47,6 +47,7 @@
 #include <ImfVersion.h>
 
 namespace Imf {
+using namespace Imf;
 
 
 bool

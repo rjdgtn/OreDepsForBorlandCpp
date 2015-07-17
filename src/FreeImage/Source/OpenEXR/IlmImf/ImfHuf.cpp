@@ -58,6 +58,7 @@ using namespace std;
 using namespace Iex;
 
 namespace Imf {
+using namespace Imf;
 namespace {
 
 

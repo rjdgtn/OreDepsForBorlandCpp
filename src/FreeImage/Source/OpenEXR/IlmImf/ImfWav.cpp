@@ -48,6 +48,7 @@
 #include <ImfWav.h>
 
 namespace Imf {
+using namespace Imf;
 namespace {
 
 

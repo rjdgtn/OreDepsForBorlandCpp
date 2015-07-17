@@ -45,6 +45,7 @@
 #include "Iex.h"
 
 namespace Imf {
+using namespace Imf;
 
 
 TileOffsets::TileOffsets (LevelMode mode,

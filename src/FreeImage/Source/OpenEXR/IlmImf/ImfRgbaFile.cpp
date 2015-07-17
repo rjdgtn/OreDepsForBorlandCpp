@@ -53,6 +53,7 @@
 
 
 namespace Imf {
+using namespace Imf;
 
 using namespace std;
 using namespace Imath;

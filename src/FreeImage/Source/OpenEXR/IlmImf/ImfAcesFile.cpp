@@ -49,6 +49,7 @@ using namespace Imath;
 using namespace Iex;
 
 namespace Imf {
+using namespace Imf;
 
 
 const Chromaticities &

@@ -43,6 +43,7 @@
 #include <ImfChromaticities.h>
 
 namespace Imf {
+using namespace Imf;
 
    
 Chromaticities::Chromaticities (const Imath::V2f &red,

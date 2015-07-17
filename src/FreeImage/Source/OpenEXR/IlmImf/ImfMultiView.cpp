@@ -43,6 +43,7 @@
 using namespace std;
 
 namespace Imf {
+using namespace Imf;
 namespace {
 
 StringVector

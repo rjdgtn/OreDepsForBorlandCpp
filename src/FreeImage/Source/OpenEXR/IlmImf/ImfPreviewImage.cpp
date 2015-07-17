@@ -44,6 +44,7 @@
 #include "Iex.h"
 
 namespace Imf {
+using namespace Imf;
 
 
 PreviewImage::PreviewImage (unsigned int width,

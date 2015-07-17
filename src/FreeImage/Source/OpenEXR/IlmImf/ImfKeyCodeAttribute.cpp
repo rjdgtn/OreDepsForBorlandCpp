@@ -42,6 +42,7 @@
 #include <ImfKeyCodeAttribute.h>
 
 namespace Imf {
+using namespace Imf;
 
 
 template <>

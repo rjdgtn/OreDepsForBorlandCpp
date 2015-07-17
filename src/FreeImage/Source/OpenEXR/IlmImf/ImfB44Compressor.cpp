@@ -112,6 +112,7 @@
 #include <algorithm>
 
 namespace Imf {
+using namespace Imf;
 
 using Imath::divp;
 using Imath::modp;

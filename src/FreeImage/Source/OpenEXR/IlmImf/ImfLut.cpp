@@ -47,6 +47,7 @@
 #include <assert.h>
 
 namespace Imf {
+using namespace Imf;
 
 
 void

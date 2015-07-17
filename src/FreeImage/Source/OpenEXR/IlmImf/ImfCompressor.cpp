@@ -49,6 +49,7 @@
 #include <ImfCheckedArithmetic.h>
 
 namespace Imf {
+using namespace Imf;
 
 using Imath::Box2i;
 

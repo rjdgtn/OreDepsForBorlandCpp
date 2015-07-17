@@ -48,6 +48,7 @@
 
 
 namespace Imf {
+using namespace Imf;
 
 using IlmThread::Mutex;
 using IlmThread::Lock;

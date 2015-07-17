@@ -45,6 +45,7 @@
 #include "Iex.h"
 
 namespace Imf {
+using namespace Imf;
 namespace {
 
 const int MIN_RUN_LENGTH = 3;

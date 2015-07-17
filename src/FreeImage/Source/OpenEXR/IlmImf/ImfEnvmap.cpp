@@ -48,6 +48,7 @@ using namespace std;
 using namespace Imath;
 
 namespace Imf {
+using namespace Imf;
 namespace LatLongMap {
 
 V2f	

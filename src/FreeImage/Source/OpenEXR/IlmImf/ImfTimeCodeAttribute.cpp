@@ -42,6 +42,7 @@
 #include <ImfTimeCodeAttribute.h>
 
 namespace Imf {
+using namespace Imf;
 
 
 template <>

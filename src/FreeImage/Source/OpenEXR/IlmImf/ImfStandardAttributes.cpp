@@ -87,6 +87,7 @@
 
 
 namespace Imf {
+using namespace Imf;
 
    
 IMF_STD_ATTRIBUTE_IMP (chromaticities, Chromaticities, Chromaticities)
