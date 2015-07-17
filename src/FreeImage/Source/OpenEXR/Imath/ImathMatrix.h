@@ -2653,7 +2653,7 @@ Matrix44<T>::gjInverse (bool singExc) const throw (Iex::MathExc)
             if (singExc)
                 throw ::Imath::SingMatrixExc ("Cannot invert singular matrix.");
 
-            return Matrix44();
+            return Matrix44<T>();
         }
 
         if (pivot != i)
@@ -2695,7 +2695,7 @@ Matrix44<T>::gjInverse (bool singExc) const throw (Iex::MathExc)
             if (singExc)
                 throw ::Imath::SingMatrixExc ("Cannot invert singular matrix.");
 
-            return Matrix44();
+            return Matrix44<T>();
         }
 
         for (j = 0; j < 4; j++)
@@ -2783,7 +2783,7 @@ Matrix44<T>::inverse (bool singExc) const throw (Iex::MathExc)
                     if (singExc)
                         throw SingMatrixExc ("Cannot invert singular matrix.");
 
-                    return Matrix44();
+                    return Matrix44<T>();
                 }
             }
         }

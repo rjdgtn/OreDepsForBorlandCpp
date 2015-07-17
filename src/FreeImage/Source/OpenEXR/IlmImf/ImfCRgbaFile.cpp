@@ -63,6 +63,7 @@ using Imath::V3i;
 using Imath::V3f;
 using Imath::M33f;
 using Imath::M44f;
+using namespace Imf;
 
 
 namespace {

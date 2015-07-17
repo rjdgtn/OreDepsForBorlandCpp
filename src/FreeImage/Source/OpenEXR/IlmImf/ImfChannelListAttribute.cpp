@@ -42,7 +42,7 @@
 
 #include <ImfChannelListAttribute.h>
 
-
+/*
 namespace Imf {
 
 namespace {
@@ -143,3 +143,4 @@ ChannelListAttribute::readValueFrom (IStream &is, int size, int version)
 
 
 } // namespace Imf
+*/
