@@ -184,33 +184,33 @@ V3fAttribute::readValueFrom (IStream &is, int size, int version)
     Xdr::read <StreamIO> (is, _value.z);
 }
 
-
-template <>
-const char *
-V3dAttribute::staticTypeName ()
-{
-    return "v3d";
-}
-
-
-template <>
-void
-V3dAttribute::writeValueTo (OStream &os, int version) const
-{
-    Xdr::write <StreamIO> (os, _value.x);
-    Xdr::write <StreamIO> (os, _value.y);
-    Xdr::write <StreamIO> (os, _value.z);
-}
-
-
-template <>
-void
-V3dAttribute::readValueFrom (IStream &is, int size, int version)
-{
-    Xdr::read <StreamIO> (is, _value.x);
-    Xdr::read <StreamIO> (is, _value.y);
-    Xdr::read <StreamIO> (is, _value.z);
-}
+//
+//template <>
+//const char *
+//V3dAttribute::staticTypeName ()
+//{
+//    return "v3d";
+//}
+//
+//
+//template <>
+//void
+//V3dAttribute::writeValueTo (OStream &os, int version) const
+//{
+//    Xdr::write <StreamIO> (os, _value.x);
+//    Xdr::write <StreamIO> (os, _value.y);
+//    Xdr::write <StreamIO> (os, _value.z);
+//}
+//
+//
+//template <>
+//void
+//V3dAttribute::readValueFrom (IStream &is, int size, int version)
+//{
+//    Xdr::read <StreamIO> (is, _value.x);
+//    Xdr::read <StreamIO> (is, _value.y);
+//    Xdr::read <StreamIO> (is, _value.z);
+//}
 
 
 } // namespace Imf

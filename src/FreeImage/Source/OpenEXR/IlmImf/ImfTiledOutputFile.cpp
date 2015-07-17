@@ -780,7 +780,7 @@ TileBufferTask::execute ()
         // and store the compressed data in the output file.
         //
     
-        _tileBuffer->dataSize = writePtr - _tileBuffer->buffer;
+        _tileBuffer->dataSize = writePtr - (const char*)_tileBuffer->buffer;
         _tileBuffer->dataPtr = _tileBuffer->buffer;
     
         if (_tileBuffer->compressor)
