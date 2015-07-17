@@ -886,7 +886,7 @@ Vec2<T>::Vec2 (T a, T b)
 
 template <class T>
 inline
-Vec2<T>::Vec2 (const Vec2 &v)
+Vec2<T>::Vec2 (const Vec2<T>&v)
 {
     x = v.x;
     y = v.y;
@@ -903,7 +903,7 @@ Vec2<T>::Vec2 (const Vec2<S> &v)
 
 template <class T>
 inline const Vec2<T> &
-Vec2<T>::operator = (const Vec2 &v)
+Vec2<T>::operator = (const Vec2<T>&v)
 {
     x = v.x;
     y = v.y;
@@ -1000,21 +1000,21 @@ Vec2<T>::equalWithRelError (const Vec2<T> &v, T e) const
 
 template <class T>
 inline T
-Vec2<T>::dot (const Vec2 &v) const
+Vec2<T>::dot (const Vec2<T>&v) const
 {
     return x * v.x + y * v.y;
 }
 
 template <class T>
 inline T
-Vec2<T>::operator ^ (const Vec2 &v) const
+Vec2<T>::operator ^ (const Vec2<T>&v) const
 {
     return dot (v);
 }
 
 template <class T>
 inline T
-Vec2<T>::cross (const Vec2 &v) const
+Vec2<T>::cross (const Vec2<T>&v) const
 {
     return x * v.y - y * v.x;
 
@@ -1022,14 +1022,14 @@ Vec2<T>::cross (const Vec2 &v) const
 
 template <class T>
 inline T
-Vec2<T>::operator % (const Vec2 &v) const
+Vec2<T>::operator % (const Vec2<T>&v) const
 {
     return x * v.y - y * v.x;
 }
 
 template <class T>
 inline const Vec2<T> &
-Vec2<T>::operator += (const Vec2 &v)
+Vec2<T>::operator += (const Vec2<T>&v)
 {
     x += v.x;
     y += v.y;
@@ -1038,14 +1038,14 @@ Vec2<T>::operator += (const Vec2 &v)
 
 template <class T>
 inline Vec2<T>
-Vec2<T>::operator + (const Vec2 &v) const
+Vec2<T>::operator + (const Vec2<T>&v) const
 {
-    return Vec2 (x + v.x, y + v.y);
+    return Vec2<T>(x + v.x, y + v.y);
 }
 
 template <class T>
 inline const Vec2<T> &
-Vec2<T>::operator -= (const Vec2 &v)
+Vec2<T>::operator -= (const Vec2<T>&v)
 {
     x -= v.x;
     y -= v.y;
@@ -1054,16 +1054,16 @@ Vec2<T>::operator -= (const Vec2 &v)
 
 template <class T>
 inline Vec2<T>
-Vec2<T>::operator - (const Vec2 &v) const
+Vec2<T>::operator - (const Vec2<T>&v) const
 {
-    return Vec2 (x - v.x, y - v.y);
+    return Vec2<T>(x - v.x, y - v.y);
 }
 
 template <class T>
 inline Vec2<T>
 Vec2<T>::operator - () const
 {
-    return Vec2 (-x, -y);
+    return Vec2<T>(-x, -y);
 }
 
 template <class T>
@@ -1077,7 +1077,7 @@ Vec2<T>::negate ()
 
 template <class T>
 inline const Vec2<T> &
-Vec2<T>::operator *= (const Vec2 &v)
+Vec2<T>::operator *= (const Vec2<T>&v)
 {
     x *= v.x;
     y *= v.y;
@@ -1095,21 +1095,21 @@ Vec2<T>::operator *= (T a)
 
 template <class T>
 inline Vec2<T>
-Vec2<T>::operator * (const Vec2 &v) const
+Vec2<T>::operator * (const Vec2<T>&v) const
 {
-    return Vec2 (x * v.x, y * v.y);
+    return Vec2<T>(x * v.x, y * v.y);
 }
 
 template <class T>
 inline Vec2<T>
 Vec2<T>::operator * (T a) const
 {
-    return Vec2 (x * a, y * a);
+    return Vec2<T>(x * a, y * a);
 }
 
 template <class T>
 inline const Vec2<T> &
-Vec2<T>::operator /= (const Vec2 &v)
+Vec2<T>::operator /= (const Vec2<T>&v)
 {
     x /= v.x;
     y /= v.y;
@@ -1127,16 +1127,16 @@ Vec2<T>::operator /= (T a)
 
 template <class T>
 inline Vec2<T>
-Vec2<T>::operator / (const Vec2 &v) const
+Vec2<T>::operator / (const Vec2<T>&v) const
 {
-    return Vec2 (x / v.x, y / v.y);
+    return Vec2<T>(x / v.x, y / v.y);
 }
 
 template <class T>
 inline Vec2<T>
 Vec2<T>::operator / (T a) const
 {
-    return Vec2 (x / a, y / a);
+    return Vec2<T>(x / a, y / a);
 }
 
 template <class T>
@@ -1238,9 +1238,9 @@ Vec2<T>::normalized () const
     T l = length();
 
     if (l == 0)
-	return Vec2 (T (0));
+	return Vec2<T>(T (0));
 
-    return Vec2 (x / l, y / l);
+    return Vec2<T>(x / l, y / l);
 }
 
 template <class T>
@@ -1252,7 +1252,7 @@ Vec2<T>::normalizedExc () const throw (Iex::MathExc)
     if (l == 0)
 	throw NullVecExc ("Cannot normalize null vector.");
 
-    return Vec2 (x / l, y / l);
+    return Vec2<T>(x / l, y / l);
 }
 
 template <class T>
@@ -1261,7 +1261,7 @@ Vec2<T>
 Vec2<T>::normalizedNonNull () const
 {
     T l = length();
-    return Vec2 (x / l, y / l);
+    return Vec2<T>(x / l, y / l);
 }
 
 
@@ -1622,7 +1622,7 @@ template <class T>
 inline Vec3<T>
 Vec3<T>::operator / (T a) const
 {
-    return Vec3 (x / a, y / a, z / a);
+    return Vec3<T> (x / a, y / a, z / a);
 }
 
 template <class T>
@@ -1732,9 +1732,9 @@ Vec3<T>::normalized () const
     T l = length();
 
     if (l == 0)
-	return Vec3 (T (0));
+		return Vec3<T>(T(0));
 
-    return Vec3 (x / l, y / l, z / l);
+	return Vec3<T>(x / l, y / l, z / l);
 }
 
 template <class T>
@@ -1746,7 +1746,7 @@ Vec3<T>::normalizedExc () const throw (Iex::MathExc)
     if (l == 0)
 	throw NullVecExc ("Cannot normalize null vector.");
 
-    return Vec3 (x / l, y / l, z / l);
+	return Vec3<T>(x / l, y / l, z / l);
 }
 
 template <class T>
@@ -1755,7 +1755,7 @@ Vec3<T>
 Vec3<T>::normalizedNonNull () const
 {
     T l = length();
-    return Vec3 (x / l, y / l, z / l);
+	return Vec3<T>(x / l, y / l, z / l);
 }
 
 

@@ -51,14 +51,29 @@ namespace Imf {
 typedef TypedAttribute<Rational> RationalAttribute;
 
 template <>
-const char *RationalAttribute::staticTypeName ();
+const char *
+RationalAttribute::staticTypeName()
+{
+	return "rational";
+}
+
 
 template <>
-void RationalAttribute::writeValueTo (OStream &, int) const;
+void
+RationalAttribute::writeValueTo(OStream &os, int version) const
+{
+	Xdr::write <StreamIO>(os, _value.n);
+	Xdr::write <StreamIO> (os, _value.d);
+}
+
 
 template <>
-void RationalAttribute::readValueFrom (IStream &, int, int);
-
+void
+RationalAttribute::readValueFrom(IStream &is, int size, int version)
+{
+	Xdr::read <StreamIO>(is, _value.n);
+	Xdr::read <StreamIO>(is, _value.d);
+}
 
 } // namespace Imf
 

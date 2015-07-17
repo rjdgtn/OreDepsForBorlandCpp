@@ -51,9 +51,33 @@ namespace Imf {
 
 
 typedef TypedAttribute<LineOrder> LineOrderAttribute;
-template <> const char *LineOrderAttribute::staticTypeName ();
-template <> void LineOrderAttribute::writeValueTo (OStream &, int) const;
-template <> void LineOrderAttribute::readValueFrom (IStream &, int, int);
+
+template <>
+const char *
+LineOrderAttribute::staticTypeName ()
+{
+    return "lineOrder";
+}
+
+
+template <>
+void
+LineOrderAttribute::writeValueTo (OStream &os, int version) const
+{
+    unsigned char tmp = _value;
+    Xdr::write <StreamIO> (os, tmp);
+}
+
+
+template <>
+void
+LineOrderAttribute::readValueFrom (IStream &is, int size, int version)
+{
+    unsigned char tmp;
+    Xdr::read <StreamIO> (is, tmp);
+    _value = LineOrder (tmp);
+}
+
 
 
 } // namespace Imf

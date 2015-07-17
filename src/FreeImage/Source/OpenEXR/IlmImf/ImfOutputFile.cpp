@@ -588,8 +588,11 @@ LineBufferTask::execute ()
     
         _lineBuffer->dataPtr = _lineBuffer->buffer;
 
-        _lineBuffer->dataSize = _lineBuffer->endOfLineBufferData -
-                                _lineBuffer->buffer;
+		const char* eol = _lineBuffer->endOfLineBufferData;
+		const char* buf = _lineBuffer->buffer;
+
+
+		_lineBuffer->dataSize = eol - buf;
     
 	//
         // Compress the data

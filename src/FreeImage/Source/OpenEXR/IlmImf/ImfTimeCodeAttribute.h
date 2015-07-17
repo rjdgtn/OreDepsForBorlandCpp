@@ -53,13 +53,35 @@ namespace Imf {
 typedef TypedAttribute<TimeCode> TimeCodeAttribute;
 
 template <>
-const char *TimeCodeAttribute::staticTypeName ();
+const char *
+TimeCodeAttribute::staticTypeName()
+{
+	return "timecode";
+}
+
 
 template <>
-void TimeCodeAttribute::writeValueTo (OStream &, int) const;
+void
+TimeCodeAttribute::writeValueTo(OStream &os, int version) const
+{
+	Xdr::write <StreamIO>(os, _value.timeAndFlags());
+	Xdr::write <StreamIO>(os, _value.userData());
+}
+
 
 template <>
-void TimeCodeAttribute::readValueFrom (IStream &, int, int);
+void
+TimeCodeAttribute::readValueFrom(IStream &is, int size, int version)
+{
+	unsigned int tmp;
+
+	Xdr::read <StreamIO>(is, tmp);
+	_value.setTimeAndFlags(tmp);
+
+	Xdr::read <StreamIO>(is, tmp);
+	_value.setUserData(tmp);
+}
+
 
 
 } // namespace Imf
