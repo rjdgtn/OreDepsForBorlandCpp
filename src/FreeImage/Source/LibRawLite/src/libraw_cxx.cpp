@@ -576,7 +576,7 @@ int LibRaw::open_file(const char *fname, INT64 max_buf_size)
         return LIBRAW_IO_ERROR;
     int big = (st.st_size > max_buf_size)?1:0;
 #else
-	struct _stati64 st;
+	struct stati64 st;
     if(_stati64(fname,&st))	
         return LIBRAW_IO_ERROR;
     int big = (st.st_size > max_buf_size)?1:0;

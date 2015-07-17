@@ -74,11 +74,11 @@ it under the terms of the one of three licenses as you choose:
 #include <io.h>
 #endif
 #ifdef WIN32
-#include <sys/utime.h>
+#include <time.h>
 #include <winsock2.h>
 #pragma comment(lib, "ws2_32.lib")
-#define snprintf _snprintf
-#define strcasecmp _stricmp
+#define snprintf snprintf
+#define strcasecmp stricmp
 #define strncasecmp strnicmp
 #else
 #include <unistd.h>
