@@ -52,21 +52,53 @@ namespace Imf {
 
 
 typedef TypedAttribute<Imath::Box2i> Box2iAttribute;
-//template <> 
-const char *Box2iAttribute::staticTypeName ();
-//template <> 
-void Box2iAttribute::writeValueTo (OStream &, int) const;
-//template <> 
-void Box2iAttribute::readValueFrom (IStream &, int, int);
+template <> const char *Box2iAttribute::staticTypeName()
+{
+	return "box2i";
+}
+
+template <> void Box2iAttribute::writeValueTo(OStream &os, int) const
+{
+	Xdr::write <StreamIO>(os, _value.min.x);
+	Xdr::write <StreamIO>(os, _value.min.y);
+	Xdr::write <StreamIO>(os, _value.max.x);
+	Xdr::write <StreamIO>(os, _value.max.y);
+}
+
+
+template <> void Box2iAttribute::readValueFrom(IStream &is, int, int)
+{
+	Xdr::read <StreamIO>(is, _value.min.x);
+	Xdr::read <StreamIO>(is, _value.min.y);
+	Xdr::read <StreamIO>(is, _value.max.x);
+	Xdr::read <StreamIO>(is, _value.max.y);
+}
+
+
 
 
 typedef TypedAttribute<Imath::Box2f> Box2fAttribute;
-//template <> 
-const char *Box2fAttribute::staticTypeName ();
-//template <> 
-void Box2fAttribute::writeValueTo (OStream &, int) const;
-//template <> 
-void Box2fAttribute::readValueFrom (IStream &, int, int);
+template <> const char *Box2fAttribute::staticTypeName()
+{
+	return "box2f";
+}
+
+template <> void Box2fAttribute::writeValueTo(OStream &os, int) const
+{
+	Xdr::write <StreamIO>(os, _value.min.x);
+	Xdr::write <StreamIO>(os, _value.min.y);
+	Xdr::write <StreamIO>(os, _value.max.x);
+	Xdr::write <StreamIO>(os, _value.max.y);
+}
+
+template <> void Box2fAttribute::readValueFrom(IStream &is, int, int)
+{
+	Xdr::read <StreamIO>(is, _value.min.x);
+	Xdr::read <StreamIO>(is, _value.min.y);
+	Xdr::read <StreamIO>(is, _value.max.x);
+	Xdr::read <StreamIO>(is, _value.max.y);
+}
+
 
 
 } // namespace Imf
