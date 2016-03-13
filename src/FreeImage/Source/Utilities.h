@@ -1,4 +1,4 @@
-// ==========================================================
+﻿// ==========================================================
 // Utility functions
 //
 // Design and implementation by
@@ -212,7 +212,7 @@ i2a(unsigned i, char *a, unsigned r) {
  @return Returns a
 */
 inline char *
-_itoa(int i, char *a, int r) {
+itoa(int i, char *a, int r) {
 	r = ((r < 2) || (r > 36)) ? 10 : r;
 	if(i < 0) {
 		*a = '-';

@@ -148,7 +148,7 @@ FreeImage_OutputMessageProc(int fif, const char *fmt, ...) {
 						{
 							char tmp[16];
 
-							_itoa(va_arg(arg, int), tmp, 8);
+							itoa(va_arg(arg, int), tmp, 8);
 
 							strcat(message, tmp);
 
@@ -164,7 +164,7 @@ FreeImage_OutputMessageProc(int fif, const char *fmt, ...) {
 						{
 							char tmp[16];
 
-							_itoa(va_arg(arg, int), tmp, 10);
+							itoa(va_arg(arg, int), tmp, 10);
 
 							strcat(message, tmp);
 
@@ -179,7 +179,7 @@ FreeImage_OutputMessageProc(int fif, const char *fmt, ...) {
 						{
 							char tmp[16];
 
-							_itoa(va_arg(arg, int), tmp, 16);
+							itoa(va_arg(arg, int), tmp, 16);
 
 							strcat(message, tmp);
 

@@ -45,7 +45,6 @@
 #define IMF_STRING(name) #name
 
 #define IMF_STD_ATTRIBUTE_IMP(name,suffix,type)				 \
-									 \
     void								 \
     add##suffix (Header &header, const type &value)			 \
     {									 \
